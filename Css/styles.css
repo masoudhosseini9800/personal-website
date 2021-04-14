@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:600&display=swap");
+@font-face {
+  font-family: "Helvetica";
+  src: url("/Fonts/Helvetica55Roman.ttf") ("truetype");
+}
+
+:root {
+  --mainWhite: #ffffff;
+  --mainTransparent: linear-gradient(142deg, rgba(18, 18, 18, 1) 0%, rgba(78, 78, 78, 1) 100%);
+  --mainGold: #daa520;
+  --mainSosoWhite: #aaaaaa;
+  --font: 1rem/1.2 "helvetica", sans-serif;
+  --bg-hover: linear-gradient(140deg, rgba(0, 0, 0, 0.1) 50%, #2654e9 30%, #62d6fa 40%, #fff 70%, #fc35ca 80%, #7559ff 77%, #f6f7fa 100%);
+}
+
+body {
+  font-family: "Montserrat";
+  /* font-family: 'Helvetica'; */
+}
+
+.top {
+  background: linear-gradient(232deg, rgba(18, 18, 18, 1) 0%, rgba(78, 78, 78, 1) 100%);
+  background-attachment: fixed;
+}
+
+.font-helvetica {
+  font-family: "Helvetica";
+}
+
+/* Navbar */
+
+nav {
+  font-family: "Helvetica";
+}
+
+@media only screen and (max-width: 576px) {
+  nav {
+    background: #101010;
+  }
+}
+
+.navbar-icon {
+  font-size: 2.2rem;
+  color: var(--mainWhite);
+}
+
+.navbar-toggler {
+  outline-color: var(--mainGold) !important;
+}
+
+.nav-link {
+  color: var(--mainSosoWhite);
+  transition: all 0.1s linear;
+}
+
+.nav-link:hover {
+  color: var(--mainWhite);
+  transition: all 0.1s linear;
+}
+
+/* Header */
+
+.spaceInRight {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+.spaceInLeft {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+}
+
+@media only screen and (max-width: 576px) {
+  .header {
+    background: #101010;
+  }
+}
+
+.title-1 {
+  color: var(--mainWhite);
+}
+
+.title-2 {
+  color: var(--mainSosoWhite);
+}
+
+.title-w {
+  width: 80%;
+}
+
+.title-ww {
+  width: 88%;
+}
+
+.lead {
+  font-size: 1.3rem;
+  width: 76%;
+}
+
+@media only screen and (max-width: 991px) {
+  .lead {
+    font-size: 1rem;
+  }
+}
+
+.title-2 p {
+  width: 78%;
+}
+
+@media only screen and (max-width: 992px) {
+  .title-1 h1,
+  h2 {
+    font-size: 25px;
+  }
+  .title-2 p {
+    font-size: 16px;
+  }
+}
+
+.btn-header {
+  position: relative;
+  bottom: 95px;
+  border-radius: 0;
+  font-family: "Helvetica";
+  /* border-image: linear-gradient(450deg, rgb(56, 55, 55), rgb(88, 0, 0));
+    border-image-slice: 1; */
+  text-align: center;
+  color: #ffffff;
+  background: transparent;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 60px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.--animated {
+  transition: all 1s;
+}
+
+.--animated span {
+  position: relative;
+  z-index: 9;
+}
+
+.--animated:after {
+  height: 100%;
+  width: 2000px;
+  transition: all 1s;
+  background: var(--bg-hover);
+}
+
+.--animated:before {
+  height: 26px;
+  width: 100%;
+  top: -50px;
+  z-index: 10;
+  opacity: 0;
+  background-color: transparent;
+}
+
+.--animated:hover:before {
+  top: 0;
+  opacity: 1;
+}
+
+.--animated:hover:after {
+  left: -1750px;
+}
+
+.--animated:before,
+a:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 7;
+  display: block;
+  content: "";
+}
+
+.--animated:active:before {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.--animated:active {
+  transform: scale(0.95);
+  transition: all 200ms;
+}
+
+@media only screen and (max-width: 991px) {
+  .btn-header {
+    bottom: 60px;
+    padding: 10px 45px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .btn-header {
+    bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .btn-header {
+    padding: 10px 30px;
+  }
+}
+
+.row-btn {
+  height: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .row-btn {
+    height: 35px;
+  }
+}
+
+@media only screen and (min-width: 991px) {
+  .input-w {
+    width: 500px;
+  }
+}
+
+.upDown img {
+  animation: upDown 0.8s ease-in-out infinite alternate;
+  cursor: pointer;
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+#scroll-img {
+  width: 60px;
+  height: 40px;
+  margin: 30px 0;
+}
+
+/* About */
+
+.about {
+  background: #101010;
+}
+
+.img-photo-2 {
+  width: 452px;
+  height: 629px;
+}
+
+.img-social {
+  width: 30px;
+  height: 30px;
+  transition: all 2s ease-in-out;
+}
+
+.img-social-5 {
+  width: 35px;
+  height: 35px;
+}
+
+.img-social-6 {
+  width: 24px;
+  height: 30px;
+}
+
+video {
+  width: 85%;
+  height: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .abil {
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .why-should {
+    font-size: 30px;
+  }
+  .can-see {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 497px) {
+  .why-should {
+    font-size: 20px;
+  }
+  .can-see {
+    font-size: 15px;
+  }
+}
+
+.btn-send {
+  padding: 7px 70px;
+  border-radius: 0;
+}
+
+/* Footer */
+
+.footer {
+  background: linear-gradient(232deg, rgba(18, 18, 18, 1) 0%, rgba(78, 78, 78, 1) 100%);
+}
+
+@media only screen and (max-width: 767px) {
+  .footer h3 {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .footer h3 {
+    font-size: 20px;
+  }
+}
+
+/* All */
+
+@media only screen and (max-width: 767px) {
+  .title {
+    font-size: 20px;
+  }
+  .title-p {
+    font-size: 17.5px;
+  }
+}
+
+/************************************* Shop Page ****************************************/
+
+.shop {
+  background: #101010;
+  /* min-height: 100vh; */
+}
+
+.card-shop {
+  background: #181818;
+}
+
+.shop-row {
+  margin-right: 24px;
+  margin-left: 24px;
+}
+
+/************************************* Portfolio Page ****************************************/
+
+.portfolio {
+  background: #101010;
+  /* min-height: 100vh; */
+}
+
+.card-portfolio-social-media {
+  background: #181818;
+  height: 200px;
+  width: 200px;
+  transition: all 0.5s;
+}
+
+.card-portfolio-social-media:hover {
+  transform: translateY(-5px);
+}
+
+.card-social-meida {
+  width: 70px;
+  height: 70px;
+}
+
+.card-footer {
+  padding: 0.75rem 0.25rem;
+}
+
+/************************************* Contact me Page ****************************************/
+
+.contact-me {
+  background: #101010;
+  min-height: 100vh;
+}
